@@ -1,7 +1,5 @@
 function SetTimer() {
-  return (
-    <>SetTimer</>
-  )
+  return <>SetTimer</>;
 }
 
-export default SetTimer
+export default SetTimer;
