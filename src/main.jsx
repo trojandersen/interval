@@ -1,12 +1,12 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import AnalogTimer from './pages/AnalogTimer';
-import Alarm from './pages/Alarm';
-import Loading from './pages/loading';
-import DigitalTimer from './pages/DigitalTimer';
-import SetTimer from './pages/SetTimer';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import AnalogTimer from "./pages/AnalogTimer";
+import Alarm from "./pages/Alarm";
+import Loading from "./pages/loading";
+import DigitalTimer from "./pages/DigitalTimer";
+import SetTimer from "./pages/SetTimer";
 
 const router = createBrowserRouter([
   {
@@ -31,8 +31,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
-)
+  </StrictMode>
+);

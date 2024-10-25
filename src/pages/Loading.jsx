@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Loading() {
   return (
-    <main className="loading">
+    <section className="w-full min-h-screen bg-black text-white flex items-center justify-center flex-col">
       <Link to="/set-timer">
         <motion.img
           src={logoWhite}
@@ -18,9 +18,9 @@ function Loading() {
           }}
         />
       </Link>
-      <h2 className="loading__title">INTERVAL</h2>
-      <p className="loading__text">For all your timing needs</p>
-    </main>
+      <h2>INTERVAL</h2>
+      <p>For all your timing needs</p>
+    </section>
   );
 }
 
