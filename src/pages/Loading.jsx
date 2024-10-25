@@ -1,4 +1,4 @@
-import "./styles/Loading.css";
+// import "./styles/Loading.css";
 import logoWhite from "../assets/logoWhite.svg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
