@@ -1,7 +1,11 @@
+import Menu from "../components/Menu.jsx";
+
 function AnalogTimer() {
   return (
-    <>AnalogTimer</>
-  )
+    <>
+      <Menu />
+    </>
+  );
 }
 
-export default AnalogTimer
+export default AnalogTimer;

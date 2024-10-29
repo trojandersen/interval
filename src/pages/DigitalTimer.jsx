@@ -1,7 +1,11 @@
+import Menu from "../components/Menu.jsx";
+
 function DigitalTimer() {
   return (
-    <>DigitalTimer</>
-  )
+    <>
+      <Menu />
+    </>
+  );
 }
 
-export default DigitalTimer
+export default DigitalTimer;
