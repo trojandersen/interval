@@ -4,30 +4,51 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AnalogTimer from "./pages/AnalogTimer";
 import Alarm from "./pages/Alarm";
-import Loading from "./pages/loading";
+import Loading from "./pages/Loading";
 import DigitalTimer from "./pages/DigitalTimer";
 import SetTimer from "./pages/SetTimer";
+import { TimerProvider } from "./contexts/TimerContext";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Loading />,
+    element: (
+      <TimerProvider>
+        <Loading />
+      </TimerProvider>
+    ),
   },
   {
     path: "/alarm",
-    element: <Alarm />,
+    element: (
+      <TimerProvider>
+        <Alarm />
+      </TimerProvider>
+    ),
   },
   {
     path: "/analog-timer",
-    element: <AnalogTimer />,
+    element: (
+      <TimerProvider>
+        <AnalogTimer />
+      </TimerProvider>
+    ),
   },
   {
     path: "/digital-timer",
-    element: <DigitalTimer />,
+    element: (
+      <TimerProvider>
+        <DigitalTimer />
+      </TimerProvider>
+    ),
   },
   {
     path: "/set-timer",
-    element: <SetTimer />,
+    element: (
+      <TimerProvider>
+        <SetTimer />
+      </TimerProvider>
+    ),
   },
 ]);
 
