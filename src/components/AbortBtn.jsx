@@ -1,9 +1,13 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { TimerContext } from "../contexts/TimerContext";
 // TODO: need to fix abortCountdown
 function AbortBtn() {
+  const { stopTimer } = useContext(TimerContext);
   const navigate = useNavigate();
   const abortCountdown = () => {
+    stopTimer();
     navigate("/set-timer");
   };
   return (

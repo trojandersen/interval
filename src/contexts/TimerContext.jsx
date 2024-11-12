@@ -29,6 +29,10 @@ export const TimerProvider = ({ children }) => {
     timer.reset();
   };
 
+  const stopTimer = () => {
+    timer.stop();
+  };
+
   if (isTargetAchieved) {
     resetTimer();
     navigate("/alarm");
@@ -40,7 +44,8 @@ export const TimerProvider = ({ children }) => {
         timer,
         isRunning: timer.isRunning(),
         timerValue: timer.getTimeValues().toString(),
-        start: startTimer,
+        startTimer,
+        stopTimer,
       }}
     >
       {children}

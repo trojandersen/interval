@@ -6,7 +6,7 @@ import { TimerContext } from "../contexts/TimerContext";
 import { useState, useContext } from "react";
 
 function SetTimer() {
-  const { start, isRunning } = useContext(TimerContext); // Access to TimerContext functions
+  const { startTimer, isRunning } = useContext(TimerContext); // Access to TimerContext functions
   const [minutes, setMinutes] = useState(10); // Default starting time in minutes
 
   // Function to decrease or increase minutes with arrow icons
@@ -19,13 +19,18 @@ function SetTimer() {
 
   // Function to start the timer based on selected minutes
   const startCountdown = () => {
-    start(minutes); // Start the timer with the selected minutes
+    startTimer(minutes); // Start the timer with the selected minutes
   };
 
   return (
     <>
       <Navbar />
-      <main className="flex items-center flex-col gap-10">
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="flex items-center flex-col gap-10"
+      >
         <section className="flex gap-10">
           <img
             src={arrowLeft}
@@ -51,7 +56,7 @@ function SetTimer() {
         >
           {isRunning ? "Timer Running" : "Start Timer"}
         </motion.button>
-      </main>
+      </motion.main>
     </>
   );
 }
