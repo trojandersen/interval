@@ -5,7 +5,7 @@ import { TimerContext } from "../contexts/TimerContext";
 import { motion } from "framer-motion";
 
 function DigitalTimer() {
-  const { timerValue, isRunning } = useContext(TimerContext); // Access to TimerContext functions
+  const { digitalTime, isRunning } = useContext(TimerContext); // Access to TimerContext functions
 
   return (
     <>
@@ -18,7 +18,7 @@ function DigitalTimer() {
       >
         <section className="flex flex-col items-center gap-2 text-xl">
           <p>Digital Timer</p>
-          <p>{timerValue}</p>
+          <p>{digitalTime}</p>
           <p>{isRunning ? "Timer Running..." : "Paused"}</p>
         </section>
         <AbortBtn />

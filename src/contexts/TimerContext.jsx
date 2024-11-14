@@ -34,9 +34,19 @@ export const TimerProvider = ({ children }) => {
   };
 
   if (isTargetAchieved) {
+    stopTimer();
     resetTimer();
+    timer.isRunning(true);
     navigate("/alarm");
   }
+
+  // Get the current time values from the timer
+  const timeValues = timer.getTimeValues();
+  const minutes = timeValues.minutes;
+  const seconds = timeValues.seconds;
+
+  // Format time as a string, e.g., "05:30"
+  const digitalTime = timer.getTimeValues().toString();
 
   return (
     <TimerContext.Provider
@@ -44,6 +54,9 @@ export const TimerProvider = ({ children }) => {
         timer,
         isRunning: timer.isRunning(),
         timerValue: timer.getTimeValues().toString(),
+        minutes,
+        seconds,
+        digitalTime, // For DigitalTimer
         startTimer,
         stopTimer,
       }}
