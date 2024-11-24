@@ -31,20 +31,24 @@ function SetTimer() {
         transition={{ duration: 1 }}
         className="flex items-center flex-col gap-10"
       >
-        <section className="flex gap-10">
-          <img
+        <section className="flex items-center gap-10">
+          <motion.img
             src={arrowLeft}
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.2 }}
             onClick={() => handleArrowClick("decrement")}
-            className="cursor-pointer"
+            className="cursor-pointer p-3"
           />
           <section className="flex items-center flex-col">
-            <h1>{minutes}</h1>
-            <h3>minutes</h3>
+            <h1 className="text-xl">{minutes}</h1>
+            <h3 className="text-xl">minutes</h3>
           </section>
-          <img
+          <motion.img
             src={arrowRight}
+            whileTap={{ scale: 0.8 }}
+            whileHover={{ scale: 1.2 }}
             onClick={() => handleArrowClick("increment")}
-            className="cursor-pointer"
+            className="cursor-pointer p-3"
           />
         </section>
         <motion.button

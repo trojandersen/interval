@@ -56,7 +56,7 @@ export const TimerProvider = ({ children }) => {
         timerValue: timer.getTimeValues().toString(),
         minutes,
         seconds,
-        digitalTime, // For DigitalTimer
+        digitalTime,
         startTimer,
         stopTimer,
       }}
